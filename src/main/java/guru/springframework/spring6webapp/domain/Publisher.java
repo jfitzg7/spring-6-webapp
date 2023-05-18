@@ -1,16 +1,16 @@
 package guru.springframework.spring6webapp.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
 public class Publisher {
-    private long id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String publisherName;
     private String address;
     private String city;
